@@ -245,11 +245,13 @@ ul {
     justify-content: center;
 }
 
+/* ATUALIZAÇÃO: Regra do clip-path agora é autossuficiente */
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: url(#rounded-diamond-clip);
+    /* A forma do SVG agora está embutida diretamente aqui, tornando-a independente do HTML. */
+    clip-path: polygon(25% 0%, 90% 0, 100% 10%, 100% 90%, 90% 100%, 25% 100%, 2.5% 55%, 2.5% 45%);
 }
 
 #especialidades {
@@ -345,7 +347,6 @@ ul {
     cursor: pointer;
     z-index: 10;
     transition: var(--transition);
-    /* ATUALIZAÇÃO: Adicionado display flex para melhor alinhamento do ícone */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +358,6 @@ ul {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ATUALIZAÇÃO: Posição das setas corrigida para dentro da área visível */
 .prev-btn {
     left: 10px;
 }
@@ -552,7 +552,6 @@ ul {
         top: -7px;
     }
     
-    /* ATUALIZAÇÃO: Posição das setas no mobile também ajustada para consistência */
     .prev-btn {
         left: 5px;
     }
